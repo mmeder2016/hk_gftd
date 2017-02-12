@@ -70,8 +70,16 @@ var db = require('./models');
 var passport = require('passport');
 var cookieParser = require('cookie-parser');
 var session = require('express-session');
+
 var MySQLStore = require('express-mysql-session')(session);
 var sessionStore = new MySQLStore(options);
+var options = {
+    host: 'alv4v3hlsipxnujn.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
+    port: 3306,
+    user: 'svv4dyckrhtcly7a',
+    password: 'tm6lcj9zpjqrsnwg',
+    database: 'fv787imyrwa1e1mz'
+};
 
 app.use(require('connect-multiparty')());
 app.use(cookieParser());
