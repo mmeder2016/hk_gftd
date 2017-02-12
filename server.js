@@ -73,13 +73,12 @@ var session = require('express-session');
 
 var MySQLStore = require('express-mysql-session')(session);
 var options = {
-    host: 'alv4v3hlsipxnujn.cbetxkdyhwsb.us-east-1.rds.amazonaws.com',
-    port: 3306,
-    user: 'svv4dyckrhtcly7a',
-    password: 'tm6lcj9zpjqrsnwg',
-    database: 'fv787imyrwa1e1mz'
+    host: db.sequelize.config.host,
+    port: db.sequelize.config.port,
+    user: db.sequelize.config.username,
+    password: db.sequelize.config.password,
+    database: db.sequelize.config.database
 };
-
 var sessionStore = new MySQLStore(options);
 
 app.use(require('connect-multiparty')());
