@@ -70,10 +70,11 @@ var db = require('./models');
 var passport = require('passport');
 var cookieParser = require('cookie-parser');
 var session = require('express-session');
+var MySQLStore = require('express-mysql-session')(session);
 
 app.use(require('connect-multiparty')());
 app.use(cookieParser());
-app.use(session({ secret: 'super-secret', resave: false, saveUninitialized: true}));
+app.use(session({ secret: 'super-secret', resave: false, saveUninitialized: true }));
 app.use(passport.initialize());
 app.use(passport.session());
 app.set('passport', passport);
@@ -92,8 +93,8 @@ router(app, db, __dirname);
 */
 db.sequelize.sync({}).then(function() {
     console.log('server.js - database has been synced');
-    app.listen(app.get('port'), function () {
-        console.log('server.js - listening on port '+app.get('port'));
+    app.listen(app.get('port'), function() {
+        console.log('server.js - listening on port ' + app.get('port'));
         console.log('server.js - IDLE - waiting for the first connection');
         console.log('================================================');
     });
