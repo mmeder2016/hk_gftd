@@ -1,0 +1,22 @@
+.login {
+    border: solid 1px;
+    margin: 4em;
+}
+
+.div-user,
+.div-pw,
+.div-btns {
+    padding: 5px;
+}
+
+.btn-register {
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+}
+
+.btn-login {
+    width: 100%;
+    text-align: center;
+    margin: 0 auto;
+}

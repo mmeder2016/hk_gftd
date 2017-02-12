@@ -1,0 +1,93 @@
+<div class="survey-container">
+    <div class="row">
+        <div class="panel panel-default">
+            <div class="panel-heading">Gift Survey</div>
+            <form action="/api/products" target="_self" method="GET">
+                <div class="row">
+                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                        <h3><strong>What is the name of the recipient?</strong></h3>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                        <input type="name" name="recipientName" required>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                        <h3><strong>What is the age of the recipient?</strong></h3>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                        <select name="ageGroup">
+                            <option value="1">6 to 12</option>
+                            <option value="2">13 to 20</option>
+                            <option value="3">21 +</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                        <h3><strong>How close is your relationship to this person?</strong></h3>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                        <select name="isClose">
+                            <option value="true">Close</option>
+                            <option value="false">Distant</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                        <h3><strong>Is this person the life of the party or a wallflower?</strong></h3>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                        <select name="isLifeOfParty">
+                            <option value="true">Party Animal</option>
+                            <option value="false">Wallflower</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                        <h3><strong>Do you want them to have something that they can use or something that they can wear?</strong></h3>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                        <select name="isUseable">
+                            <option value="true">Use</option>
+                            <option value="false">Wear</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                        <h3><strong>Do you want to give them a luxury item or an essential item?</strong></h3>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                        <select name="isLuxury">
+                            <option value="true">Luxury</option>
+                            <option value="false">Essential</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="row">
+                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                        <h3><strong>Do you want the item to have a high price point or low price point?</strong></h3>
+                    </div>
+                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                        <select name="isPriceHigh">
+                            <option value="true">High</option>
+                            <option value="false">Low</option>
+                        </select>
+                    </div>
+                </div>
+                <!-- submit button -->
+                <div class="row">
+                    <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5"></div>
+                    <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
+                        <input name="userid" type="hidden" value={{ data.unid.id }}>
+                        <input name="userName" type="hidden" value={{ data.unid.userName }}>
+                        <button type="submit" class="btn btn-secondary btn-lg">Submit</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>

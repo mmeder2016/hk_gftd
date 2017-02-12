@@ -1,0 +1,48 @@
+<div class="row center">
+	<div class="panel panel-default">
+	  <!-- Default panel contents -->
+	  	<div class="panel-heading">Gift Search Results</div>
+	  		<div class="col-xs-6 col-sm-4">
+				<h3>There are {{data.products.length}} matching gifts!</h3>
+	    		<table class="table">
+	        		<thead>
+	            		<tr>
+	               			<th class="center">ID</th>
+	               			<th class="center">Product Name</th>
+                   			<th class="center">Description</th>
+                   			<th class="center"></th>
+             			</tr>
+            		</thead>
+            		<tbody id="resultsTable"></tbody>
+            		{{#each data.products}}
+	               	<tr>
+                        <td>{{this.id}}</td>
+	                	<td>{{this.productName}}</td>
+	                	<td>{{this.description}}</td>
+                        <td>
+                            <form action="/api/chooseprod" target="_self" method="GET">
+                                <input name="index" type="hidden" value={{@index}}>
+                                <input name="id" type="hidden" value={{this.id}}>
+                                <input name="productName" type="hidden" value="{{this.productName}}">
+                                <input name="description" type="hidden" value="{{this.description}}">
+                                <input name="recipientName" type="hidden" value="{{@root.data.rnid.recipientName}}">
+                                <input name="recipid" type="hidden" value={{@root.data.rnid.id}}>
+                                <input name="userid" type="hidden" value={{@root.data.unid.id}}>
+                                <input name="userName" type="hidden" value="{{@root.data.unid.userName}}">
+                                <button type="submit" class="btn btn-success btn-login">Choose Product</button>
+                            </form>
+                        <td>
+	               	</tr>
+                    {{else}}
+	               	<tr>
+                        <td>No Matching Products Found</td>
+                        <td></td>
+                        <td></td>
+	               	</tr>
+	               	{{/each}}
+            		</tbody>
+	    		</table>
+	        </div>
+	    </div>
+	</div>
+</div>

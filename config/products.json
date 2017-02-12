@@ -1,0 +1,11 @@
+[
+    {"productName": "prod_1", "description": "prod_1 description", "ageGroup": 1, "isClose": true, "isLifeOfParty": true, "isUseable": true, "isLuxury": true, "isPriceHigh": true},
+    {"productName": "prod_2", "description": "prod_2 description", "ageGroup": 1, "isClose": false, "isLifeOfParty": false, "isUseable": false, "isLuxury": true, "isPriceHigh": true},
+    {"productName": "prod_3", "description": "prod_3 description", "ageGroup": 2, "isClose": true, "isLifeOfParty": true, "isUseable": true, "isLuxury": true, "isPriceHigh": true},
+    {"productName": "prod_4", "description": "prod_4 description", "ageGroup": 2, "isClose": false, "isLifeOfParty": true, "isUseable": false, "isLuxury": false, "isPriceHigh": false},
+    {"productName": "prod_5", "description": "prod_5 description", "ageGroup": 3, "isClose": true, "isLifeOfParty": false, "isUseable": true, "isLuxury": false, "isPriceHigh": false},
+    {"productName": "prod_6", "description": "prod_6 description", "ageGroup": 3, "isClose": false, "isLifeOfParty": false, "isUseable": false, "isLuxury": true, "isPriceHigh": true},
+    {"productName": "prod_7", "description": "prod_7 description", "ageGroup": 1, "isClose": true, "isLifeOfParty": true, "isUseable": true, "isLuxury": false, "isPriceHigh": false},
+    {"productName": "prod_8", "description": "prod_8 description", "ageGroup": 2, "isClose": true, "isLifeOfParty": true, "isUseable": true, "isLuxury": false, "isPriceHigh": false},
+    {"productName": "prod_9", "description": "prod_9 description", "ageGroup": 3, "isClose": true, "isLifeOfParty": true, "isUseable": true, "isLuxury": false, "isPriceHigh": false}
+]

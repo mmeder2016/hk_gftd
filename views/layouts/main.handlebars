@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>GFTD- An Interactive Gift Suggestion Application - NU926fsf - Team Project</title>
+    <meta name="author" content="Cat Crooke">
+    <meta name="author" content="Mike Meder">
+    <meta name="author" content="Jim Motyl">
+    <meta name="author" content="Dee Terwilliger">
+    <meta name="description" content="A gift recommendation application - NU926fsf - Team Project.">
+    <meta name="keywords" content="node,express,server,handlebars,sequelize,mysql">
+    <script src="https://code.jquery.com/jquery-3.1.1.js" integrity="sha256-16cdPddA6VdVInumRGo6IbivbERE8p7CQR3HzTBuELA=" crossorigin="anonymous"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
+    <!--- -->
+    <!-- Required CSS CDN's for this application-->
+    <!-- Bootstrap -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+    <!-- Site Styling -->
+    <link rel="stylesheet" href="/assets/css/gftd.css" type="text/css">
+    <link rel="stylesheet" href="/assets/css/login.css" type="text/css">
+    <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+    <!-- -->
+</head>
+
+<body>
+    <div class="container-fluid">
+        <div class="row">
+            <div class="top-header">
+                <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4"></div>
+                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
+                        <h1>GFTD</h1>
+                    </div>
+                <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                        <form action="/logout" target="_self" method="GET">
+                            <button type="submit" class="btn btn-secondary">Logout</button>
+                        </form>
+                </div>
+                <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2">
+                        <form action="/newproduct" target="_self" method="GET">
+                            <button type="submit" class="btn btn-secondary">Add a New Product</button>
+                        </form>
+                </div>
+                </div>
+            </div>
+        </div>
+            <!-- *** PAGE CONTENT START *** -->
+            {{{ body }}}
+            <!-- *** PAGE CONTENT END *** -->
+        <div class="row center">
+            <div class="col-lg-12 col-md-12 col-sm-12 col-xs-12">
+                <div class="panel panel-default">
+                    <div class="panel-footer">MMTC, Inc.</div>
+                </div>
+            </div>
+        </div>
+    </div>
+</body>
+
+</html>
