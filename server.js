@@ -102,8 +102,8 @@ router(app, db, __dirname);
 */
 db.sequelize.sync({}).then(function() {
     console.log('server.js - database has been synced');
-    app.listen(app.get('port'), function() {
-        console.log('server.js - listening on port ' + app.get('port'));
+    app.listen(app.get('port'), function () {
+        console.log('server.js - listening on port '+app.get('port'));
         console.log('server.js - IDLE - waiting for the first connection');
         console.log('================================================');
     });

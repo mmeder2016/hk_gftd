@@ -1,0 +1,41 @@
+<div class="row center">
+	<div class="panel panel-default">
+	  <!-- Default panel contents -->
+	  	<div class="panel-heading">Past Gift Searches</div>
+	  		<div class="col-xs-6 col-sm-4">
+				{{!-- <h3>There are {{data.products.length}} matching gifts!</h3> --}}
+	    		<table class="table">
+	        		<thead>
+	            		<tr>
+	               			<th class="center">Recipient Name</th>
+                            <th class="center">Product Name</th>
+                   			<th class="center">Description</th>
+             			</tr>
+            		</thead>
+            		<tbody id="pastSearchTable"></tbody>
+            		{{#each data.products}}
+	               	<tr>
+                        <td>{{this.RecipientName}}</td>
+	                	<td>{{this.productName}}</td>
+	                	<td>{{this.description}}</td>
+                        <td>
+                            <form action="/api/chooseprod" target="_self" method="GET">
+                                <input name="recipientName" type="hidden" value="{{@root.data.rnid.recipientName}}"> 
+                                <input name="productName" type="hidden" value="{{this.productName}}">
+                                <input name="description" type="hidden" value="{{this.description}}">
+                            </form>
+                        <td>
+	               	</tr>
+                    {{else}}
+	               	<tr>
+                        <td>No Past Searches Found</td>
+                        <td></td>
+                        <td></td>
+	               	</tr>
+	               	{{/each}}
+            		</tbody>
+	    		</table>
+	        </div>
+	    </div>
+	</div>
+</div>

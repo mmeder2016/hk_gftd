@@ -241,19 +241,37 @@ Sets the height to 80/100ths of the viewport.
     useful classes above and they'll be kept for now.
 */
 
-
-/*body {
-    background-image: url(../img/gift.png);
+body {
+    background-image: url("https://www.transparenttextures.com/patterns/diagmonds-light.png");
+    background-color: #37a4a8;
     background-repeat: no-repeat;
     background-size: cover;
     text-align: center;
     min-height: 100%;
 }
 
+img {
+    padding-top: 30px;
+    height: 150px;
+}
+
+.gftdHeader {
+    border: 3px solid #009999;
+    background-color: black;
+}
+
+.panel-heading {
+    background-color: rgb(221, 155, 159);
+    font-family: 'Pacifico', cursive;
+    font-size: 20px;
+    color: black;
+}
+
 h1 {
     font-family: 'Pacifico', cursive;
     font-size: 100px;
     color: black;
+    padding-top: 10px;
 }
 
 p {
@@ -270,7 +288,6 @@ p {
     font-size: 10px;
     text-align: center;
 }
-*/
 
 .sameline {
     display: inline-block;
