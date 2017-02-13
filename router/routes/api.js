@@ -192,12 +192,15 @@ module.exports = function(app, db, approot) {
         renderdata.gifts.push(JSON.parse(JSON.stringify(gift)));
         // add the new gift to the table
         db.Gift.create({
+            productName: newgift.productName,
+            description: newgift.description, 
+            recipientName: newgift.recipientName,
             UserId: newgift.userid,
             ProductId: newgift.id,
             RecipientId: newgift.recipid
         })
         .then(function(dbGift) {
-            log('prodToGift() - product created');
+            log('prodToGift() - gift created');
         });
         // then delete it from the products
         // list

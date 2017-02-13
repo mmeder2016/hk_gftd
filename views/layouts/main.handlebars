@@ -20,6 +20,7 @@
     <link rel="stylesheet" href="/assets/css/gftd.css" type="text/css">
     <link rel="stylesheet" href="/assets/css/login.css" type="text/css">
     <link href="https://fonts.googleapis.com/css?family=Pacifico" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css?family=Sansita:400i" rel="stylesheet">
     <!-- -->
 </head>
 
@@ -41,20 +42,21 @@
         <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4"></div>
         <div class="row">
         <div class="col-xs-8 col-sm-8 col-md-8 col-lg-8"></div>
-                <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
-                        <form action="/logout" target="_self" method="GET">
-                            <button type="submit" class="btn btn-secondary">Logout</button>
-                        </form>
-                </div>
+
                 <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
                     <form action="/newproduct" target="_self" method="GET">
-                        <button type="submit" class="btn btn-secondary">Add a New Product</button>
+                        <button type="submit" class="btn btn-primary btn-sm">Add Gift</button>
                     </form>
                 </div>
                 {{!-- code for a results button to be added to link to recipient results page --}}
                 <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
                     <form action="/pastsearches" target="_self" method="GET">
-                        <button type="submit" class="btn btn-secondary">Past Search Results</button>
+                        <button type="submit" class="btn btn-primary btn-sm">Past Searches</button>
+                    </form>
+                </div>
+                <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1">
+                    <form action="/logout" target="_self" method="GET">
+                        <button type="submit" class="btn btn-primary btn-sm">Logout</button>
                     </form>
                 </div>              
                 <div class="col-xs-1 col-sm-1 col-md-1 col-lg-1"></div>

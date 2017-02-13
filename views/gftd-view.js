@@ -46,6 +46,14 @@ module.exports = (function() {
         res.render('newproduct', {});
     };
 
+    gftdview.renderPastSearches = function(res, appdata) {
+        console.log(srcFile+' - renderPastSearches() - rendering page now');
+        var renderData = {
+            data: JSON.parse(JSON.stringify(appdata))
+        };
+        res.render('pastsearches', renderData);
+    };
+
 
     /* ******************************************************************** */
     /*

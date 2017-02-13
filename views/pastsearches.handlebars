@@ -3,7 +3,7 @@
 	  <!-- Default panel contents -->
 	  	<div class="panel-heading">Past Gift Searches</div>
 	  		<div class="col-xs-6 col-sm-4">
-				{{!-- <h3>There are {{data.products.length}} matching gifts!</h3> --}}
+				{{!-- <h3>There are {{data.gifts.length}} matching gifts!</h3> --}}
 	    		<table class="table">
 	        		<thead>
 	            		<tr>
@@ -13,18 +13,11 @@
              			</tr>
             		</thead>
             		<tbody id="pastSearchTable"></tbody>
-            		{{#each data.products}}
+            		{{#each data.gifts}}
 	               	<tr>
-                        <td>{{this.RecipientName}}</td>
+                        <td>{{this.recipientName}}</td>
 	                	<td>{{this.productName}}</td>
 	                	<td>{{this.description}}</td>
-                        <td>
-                            <form action="/api/chooseprod" target="_self" method="GET">
-                                <input name="recipientName" type="hidden" value="{{@root.data.rnid.recipientName}}"> 
-                                <input name="productName" type="hidden" value="{{this.productName}}">
-                                <input name="description" type="hidden" value="{{this.description}}">
-                            </form>
-                        <td>
 	               	</tr>
                     {{else}}
 	               	<tr>

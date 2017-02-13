@@ -2,6 +2,18 @@
 //    for a recipient
 module.exports = function(sequelize, DataTypes) {
     var Gift = sequelize.define("Gift", {
+        productName: {
+        type: DataTypes.STRING,
+        allowNull: false
+        },
+        description: {
+        type: DataTypes.STRING,
+        allowNull: false
+        },
+        recipientName: {
+            type: DataTypes.STRING,
+            allowNull: false
+        }
     },
     {
         classMethods: {
@@ -18,7 +30,6 @@ module.exports = function(sequelize, DataTypes) {
             associate: function(models) {
                 Gift.belongsTo(models.User);
             }
-        }
-    });
+        }    });
   return Gift;
 };

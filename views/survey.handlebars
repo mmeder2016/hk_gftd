@@ -1,92 +1,107 @@
 {{!-- <div class="survey-container"> --}}
     <div class="row">
         {{!-- <div class="panel panel-default"> --}}
-            <div class="panel-heading">Gift Survey</div>
+            <div class="panel-heading">Complete Our Gift Survey to Find Some Gift Suggestions!</div>
             <form action="/api/products" target="_self" method="GET">
                 <div class="row">
-                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3"></div>
+                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">                   
                         <h3><strong>What is the name of the recipient?</strong></h3>
                     </div>
-                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                        <input type="name" name="recipientName" required>
+                    <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2" id="giftee">
+                        <input type="name" name="recipientName" required> 
                     </div>
+                    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3"></div>
                 </div>
                 <div class="row">
-                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3"></div>
+                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">
                         <h3><strong>What is the age of the recipient?</strong></h3>
                     </div>
-                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                    <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2" id="giftee">
                         <select name="ageGroup">
                             <option value="1">6 to 12</option>
                             <option value="2">13 to 20</option>
                             <option value="3">21 +</option>
                         </select>
                     </div>
+                    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3"></div>
                 </div>
                 <div class="row">
-                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                        <h3><strong>How close is your relationship to this person?</strong></h3>
+                    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3"></div>
+                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">                    
+                        <h3><strong>Are you close with this person?</strong></h3>
                     </div>
-                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                    <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2" id="giftee">
                         <select name="isClose">
-                            <option value="true">Close</option>
-                            <option value="false">Distant</option>
+                            <option value="true">Yes</option>
+                            <option value="false">No</option>
                         </select>
                     </div>
+                    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3"></div>
                 </div>
                 <div class="row">
-                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                        <h3><strong>Is this person the life of the party or a wallflower?</strong></h3>
+                    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3"></div>
+                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">   
+                        <h3><strong>Is this person outgoing?</strong></h3>
                     </div>
-                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                    <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2" id="giftee">
                         <select name="isLifeOfParty">
-                            <option value="true">Party Animal</option>
-                            <option value="false">Wallflower</option>
+                            <option value="true">Yes</option>
+                            <option value="false">No</option>
                         </select>
                     </div>
+                    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3"></div>
                 </div>
                 <div class="row">
-                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                        <h3><strong>Do you want them to have something that they can use or something that they can wear?</strong></h3>
+                    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3"></div>
+                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">  
+                        <h3><strong>Could this gift be worn?</strong></h3>
                     </div>
-                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                    <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2" id="giftee">
                         <select name="isUseable">
-                            <option value="true">Use</option>
-                            <option value="false">Wear</option>
+                            <option value="true">Yes</option>
+                            <option value="false">No</option>
                         </select>
                     </div>
+                    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3"></div>
                 </div>
                 <div class="row">
-                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                        <h3><strong>Do you want to give them a luxury item or an essential item?</strong></h3>
+                    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3"></div>
+                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">  
+                        <h3><strong>Is this gift a luxury item?</strong></h3>
                     </div>
-                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                    <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2" id="giftee">
                         <select name="isLuxury">
-                            <option value="true">Luxury</option>
-                            <option value="false">Essential</option>
+                            <option value="true">Yes</option>
+                            <option value="false">No</option>
                         </select>
                     </div>
+                    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3"></div>
                 </div>
                 <div class="row">
-                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
-                        <h3><strong>Do you want the item to have a high price point or low price point?</strong></h3>
+                    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3"></div>
+                    <div class="col-xs-4 col-sm-4 col-md-4 col-lg-4">  
+                        <h3><strong>Is this item over $100?</strong></h3>
                     </div>
-                    <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+                    <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2" id="giftee">
                         <select name="isPriceHigh">
-                            <option value="true">High</option>
-                            <option value="false">Low</option>
+                            <option value="true">Yes</option>
+                            <option value="false">No</option>
                         </select>
                     </div>
+                    <div class="col-xs-3 col-sm-3 col-md-3 col-lg-3"></div>
                  </div> 
                 <!-- submit button -->
                 <div class="row">
                     <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5"></div>
-                    <div class="col-xs-7 col-sm-7 col-md-7 col-lg-7">
+                    <div class="col-xs-2 col-sm-2 col-md-2 col-lg-2" id="answerButton">
                         <input name="userid" type="hidden" value={{ data.unid.id }}>
                         <input name="userName" type="hidden" value={{ data.unid.userName }}>
-                        <button type="submit" class="btn btn-secondary btn-lg">Submit</button>
+                        <button type="submit" class="btn btn-success">Submit</button>
                     </div>
-                </div>
+                    <div class="col-xs-5 col-sm-5 col-md-5 col-lg-5"></div>
+                </div>           
             </form>
         {{!-- </div> --}}
     </div>
